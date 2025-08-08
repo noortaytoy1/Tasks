@@ -7,13 +7,11 @@ import string
 from pdfminer.high_level import extract_text as extract_pdf_text
 
 st.set_page_config(page_title="Resume Screening App", layout="centered")
-st.title("📄 Resume Screening App")
+st.title("Resume Screening App")
 st.write("Upload a job description and one or more resumes to see how well they match.")
 
-# Load model
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
-# --- Helper functions ---
 
 def extract_text_from_docx(file):
     doc = docx.Document(file)
@@ -34,7 +32,6 @@ def get_keywords(text):
     keywords = [w for w in words if len(w) > 2 and w not in common_words]
     return set(keywords)
 
-# --- Sidebar instructions ---
 with st.sidebar:
     st.header("📌 Instructions")
     st.markdown("""
@@ -43,14 +40,13 @@ with st.sidebar:
     3. View match scores and justifications below.
     """)
 
-# --- Uploads ---
+
 st.subheader("1. Upload Job Description")
 job_file = st.file_uploader("Upload job description (.txt, .pdf, .docx)", type=["txt", "pdf", "docx"])
 
 st.subheader("2. Upload Resumes")
 resume_files = st.file_uploader("Upload one or more resumes", type=["txt", "pdf", "docx"], accept_multiple_files=True)
 
-# --- Processing ---
 if job_file and resume_files:
     job_description = extract_text_from_uploaded_file(job_file)
     job_embedding = model.encode([job_description])
