@@ -1,6 +1,7 @@
 streamlit
-spacy
 sentence-transformers
-pandas
-numpy
 scikit-learn
+pandas
+python-docx
+pdfminer.six
+
