@@ -20,16 +20,16 @@ A simple web app that compares your resume to a target job description and sugge
 
 1. **Prepare your files**
 
-   * Your resume **in `.docx` format** (Word).
-   * The job description **in `.docx` format** (copy/paste the JD into a Word file and save as `.docx`).
+   * Your resume (**.docx**, **.pdf**, or **.txt** format).
+   * The job description (**.docx**, **.pdf**, or **.txt** format).
 
 2. **Open the app**
    Go to **[https://3hsxkqhukzamkuwhxkgpv2.streamlit.app/](https://3hsxkqhukzamkuwhxkgpv2.streamlit.app/)**.
 
 3. **Upload your documents**
 
-   * Click **“Upload Resume (.docx)”** and select your resume.
-   * Click **“Upload Job Description (.docx)”** and select the JD file.
+   * Click **“Upload Resume”** and select your resume.
+   * Click **“Upload Job Description”** and select the JD file.
 
 4. **Review the analysis**
 
@@ -45,7 +45,7 @@ A simple web app that compares your resume to a target job description and sugge
 
 ## 📁 File Requirements
 
-* **Accepted format:** `.docx` only (no PDF/Google Docs/Pages).
+* **Accepted formats:** `.docx`, `.pdf`, `.txt`.
 * **Language:** English recommended.
 * **Length:** Up to \~3 pages for best results.
 * **Content style:** Plain text in a standard resume layout (avoid heavy tables, text boxes, or images).
@@ -86,8 +86,8 @@ A simple web app that compares your resume to a target job description and sugge
 
 ## 🚦 Common Issues & Troubleshooting
 
-* **“File type not supported”** → Ensure both uploads are **`.docx`**.
-* **Weird formatting / missing text** → Re‑save your resume as a simple `.docx` (avoid tables/text boxes); export from Google Docs as `.docx` and re‑try.
+* **“File type not supported”** → Ensure your files are `.docx`, `.pdf`, or `.txt`.
+* **Weird formatting / missing text** → For `.docx`, re‑save your resume as a simple file (avoid tables/text boxes). For PDFs, ensure they contain selectable text (not scans).
 * **Very low score despite relevance** → Use more **explicit phrasing** and the **same nouns/verbs** as the JD. Add specific tools (e.g., “QEMU,” “CAN bus,” “Vivado,” “TensorFlow”).
 * **Timeout or app won’t load** → Refresh the page or try again later.
 
@@ -95,7 +95,7 @@ A simple web app that compares your resume to a target job description and sugge
 
 ## 📝 Example Workflow
 
-1. Upload **Resume\_v3.docx** and **JD\_Senior\_Embedded\_Engineer.docx**.
+1. Upload **Resume\_v3.docx** and **JD\_Senior\_Embedded\_Engineer.pdf**.
 2. Score = **58%**. Feedback shows missing: *ISO 26262*, *CAN bus*, *ASIL*.
 3. Update resume bullets truthfully: add your ASIL‑B project, CAN diagnostics, and testing framework.
 4. Re‑upload updated resume → Score = **76%**.
@@ -105,8 +105,8 @@ A simple web app that compares your resume to a target job description and sugge
 
 ## ❓FAQ
 
-**Q: Can I upload PDFs?**
-A: No, please upload **`.docx`** files for both resume and JD.
+**Q: Can I upload PDFs or TXT files?**
+A: Yes—`.docx`, `.pdf`, and `.txt` are supported.
 
 **Q: Does a higher score guarantee interviews?**
 A: No—scores help with alignment, but outcomes depend on experience, company, and screening process.
@@ -127,4 +127,4 @@ A: Yes! Tailor a fresh resume for each job. Save each version with a clear name 
 * Put **most relevant achievements first**.
 
 ---
-Enjoy!
+
